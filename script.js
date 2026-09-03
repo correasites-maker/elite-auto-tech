@@ -52,6 +52,23 @@ document.querySelectorAll('.reveal').forEach((element, index) => {
   revealObserver.observe(element);
 });
 
+// Rede de segurança: se o IntersectionObserver falhar em algum navegador,
+// nada de conteúdo (imagens inclusive) pode ficar escondido para sempre.
+const revealFallback = () => {
+  let pending = 0;
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach((element) => {
+    if (element.getBoundingClientRect().top < window.innerHeight * 0.9) {
+      element.classList.add('is-visible');
+    } else {
+      pending += 1;
+    }
+  });
+  if (!pending) window.removeEventListener('scroll', revealFallback);
+};
+window.addEventListener('scroll', revealFallback, { passive: true });
+window.addEventListener('load', revealFallback);
+setTimeout(revealFallback, 1200);
+
 mobileViewport.addEventListener('change', (event) => {
   if (!event.matches) return;
   document.querySelectorAll('.reveal').forEach((element) => {
