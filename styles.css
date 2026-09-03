@@ -92,7 +92,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; }
 .text-link { display: inline-flex; gap: 10px; align-items: center; margin-top: 20px; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-size: 13px; font-weight: 600; }
 .text-link span { color: var(--blue); }
 .diagnostic-photo { position: relative; margin: 0; overflow: hidden; background: #dce4e9; border-radius: 2px 42px 2px 2px; box-shadow: 0 35px 80px rgba(24,42,58,.15); }
-.diagnostic-photo img { aspect-ratio: 3/2; width: 100%; object-fit: cover; transition: transform .9s var(--ease); }
+.diagnostic-photo img { aspect-ratio: 3/2; width: 100%; height: auto; object-fit: cover; transition: transform .9s var(--ease); }
 .diagnostic-photo:hover img { transform: scale(1.025); }
 .diagnostic-photo figcaption { position: absolute; inset: auto 0 0; padding: 17px 20px; display: flex; gap: 18px; color: var(--white); background: linear-gradient(transparent, rgba(7,16,25,.85)); font-size: 12px; }
 .diagnostic-photo figcaption span { color: var(--blue-bright); }
@@ -123,7 +123,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; }
 .workshop-details strong { color: var(--blue-bright); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 .workshop-details span { color: #d1d9df; font-size: 12px; }
 .reception-image { position: absolute; top: clamp(30px, 5vw, 70px); right: clamp(28px, 5vw, 70px); z-index: 1; width: min(28%, 350px); margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.4); box-shadow: 0 35px 90px rgba(0,0,0,.28); }
-.reception-image img { width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform 1s var(--ease); }
+.reception-image img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; transition: transform 1s var(--ease); }
 .reception-image:hover img { transform: scale(1.025); }
 .reception-image figcaption { padding: 13px 15px; display: flex; gap: 13px; background: rgba(7,16,25,.88); backdrop-filter: blur(12px); color: rgba(255,255,255,.76); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .reception-image figcaption span { color: var(--blue-bright); }
