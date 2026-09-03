@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elite-auto-tech-canoas.vercel.app/sitemap.xml
